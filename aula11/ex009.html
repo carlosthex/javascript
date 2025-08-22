@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica Nacionalidade</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    Digite sua nacionalidade: <input type="text" name="txtn" id="txtn">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var tn1 = window.document.getElementById('txtn')
+            var nac = tn1.value
+            var res = window.document.getElementById('res')
+            if (nac.toLocaleUpperCase() != 'BRASIL') {
+                res.innerHTML = 'Você é estrangeiro'
+            } else {
+                res.innerHTML = 'Você é Brasileiro'
+            }
+
+        }
+    </script>
+</body>
+</html>
