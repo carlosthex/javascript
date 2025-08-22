@@ -8,13 +8,24 @@
         body {
             background-color: lightblue;
             font: normal 20px Arial;
+            text-align: center;
+        }
+
+        #botao {
+            background-color: grey;
+            color: white;
+        }
+
+        #botao:hover {
+            background-color: white;
+            color: grey;
         }
     </style>
 </head>
 <body>
     <h1>Verificador de Nacionalidade</h1>
     Digite sua nacionalidade: <input type="text" name="txtn" id="txtn">
-    <input type="button" value="Verificar" onclick="verificar()">
+    <input type="button" value="Verificar" id="botao" onclick="verificar()">
     <div id="res"></div>
     <script>
         function verificar() {
